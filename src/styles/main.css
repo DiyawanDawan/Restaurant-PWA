@@ -1,0 +1,435 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #0000f2;
+  color: #ffffff;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 150px;
+}
+
+/* Like Button */
+.like {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #610cff;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 44px;
+  color: #ff1414;
+  cursor: pointer;
+}
+
+/* App Bar */
+.app-bar {
+  padding: 8px 16px;
+  background-color: #0228ff;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #212121;
+  font-size: 28px;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 14px;
+  overflow: hidden;
+  list-style: none;
+  background-color: #0000f2;
+  transition: left 0.3s ease-in-out; 
+}
+.list-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: auto;
+  transition: transform 0.3s;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  transition: color 0.3s;
+}
+.app-bar .app-bar__navigation ul li a:hover {
+  color: #ff6600; /* Warna saat dihover */
+  transform: scale(1.1); /* Efek perbesaran saat hover */
+  text-decoration: underline;
+}
+
+.rating {
+  display: flex;
+  text-align: center;
+  margin: 5px;
+  padding-top: 4px;
+  background-color: #636363;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px; /* Ukuran font */
+  color: #ffcc00;
+  margin: 5px 0; 
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 450px;
+  text-align: center;
+  background-position: center;
+  background-color: black;
+}
+
+.hero-brand {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 1.2em;
+  font-style: italic;
+  text-shadow: 3px 2px black;
+  padding-top: 70px;
+}
+
+.hero-desc {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 1em;
+  
+  text-shadow: 3px 2px black;
+}
+
+/* Main Content */
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.explore-list {
+  width: 100%;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.explore-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 50px;
+}
+.card-link {
+  text-decoration: none;
+  font-size: 2rem;
+  height: 44px;
+  color: #333;
+  background: linear-gradient(0deg, #333, #333);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s;
+}
+
+.card-link:hover {
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+
+ .list-city {
+  font-size: 15px;
+  margin: 25px;
+} 
+
+.list-thumb {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Detail Card */
+.detail-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  margin-top: 35px 0 50px 0;
+  padding-bottom: 50px;
+  
+}
+.content-detail {
+  padding-left: 20px;
+  background-color: #fff;
+}
+.detail-name {
+  font-size: 30px;
+  height: 44px;
+}
+
+.detail-categories {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 28px;
+}
+
+.detail-thumb {
+  width: 85%;
+  padding: 20px;
+  border-radius: 30px;
+  justify-content: center;
+}
+/* TODO css review */
+.review {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.review-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.input-text,
+.input-number,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  height: 150px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #123bf4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+input#name.input-text, input#rating.input-number, button.submit-button {
+  min-width: 44px; /* Lebar minimal 44px */
+  min-height: 44px; /* Tinggi minimal 44px */
+}
+.submit-button:hover {
+  background-color: #ff6600;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+button#hamburgerButton {
+  font-weight: bold;  
+  font-size: 35px;
+}
+.detail-card2 {
+  width: 80%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.detail-city {
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+detail-address {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+detail-desc {
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.detail-menus {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-foods,
+.detail-drinks {
+  flex: 1;
+  padding: 10px;
+}
+.detail-foods,
+.detail-drinks {
+  width: 48%;
+}
+/* Style untuk layar dengan lebar 500px atau kurang */
+
+.detail-foods h5,
+.detail-drinks h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; 
+}
+.detail-foods ul,
+.detail-drinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail-foods li,
+.detail-drinks li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.detail-foods a,
+.detail-drinks a {
+  text-decoration: none;
+  color: #007BFF; 
+}
+
+.detail-foods a:hover,
+.detail-drinks a:hover {
+  text-decoration: underline;
+}
+
+.detail-review {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.detail-review h6 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.detail-review p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.detail-review p:first-of-type {
+  font-style: italic;
+}
+
+.input-text,
+.textarea {
+  padding: 10px; 
+  font-size: 16px;
+}
+
+.detail-review p:last-of-type {
+  font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+  background-color: #161616;
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 2.1em;
+  line-height: 1.6;
+}
+footer p a{
+  height: 44px;
+}
